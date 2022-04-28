@@ -6,6 +6,7 @@ import PopupWithForm from "./PopupWithForm";
 import ImagePopup from "./ImagePopup";
 
 
+
 function App() {
 
   const [isEditProfilePopupOpen, setIsEditProfilePopupOpen] = React.useState(false);
@@ -39,7 +40,7 @@ function App() {
   }
 
   return (
-      <div className="page">
+      <body className="page">
       <div className="page__container">
         <Header/>
         <Main onEditProfile={handleEditProfileClick} onAddPlace={handleAddPlaceClick} onEditAvatar={handleEditAvatarClick} onCardClick={handleCardClick}/>
@@ -72,7 +73,7 @@ function App() {
 
         <ImagePopup isOpen ={isImagePopupOpen} onClose={closeAllPopups} card={selectedCard}/>
 
-      </div>
+      </body>
       );
 }
 
