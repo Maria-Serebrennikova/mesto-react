@@ -1,0 +1,34 @@
+.page__container {
+    margin: 0 auto;
+    max-width: 1280px;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+ .page__container {
+     width: 768px;
+ }
+}
+@media screen and (max-width: 767px){
+ .page__container {
+   width: 320px;
+   }
+}  
+
+/* .root {
+  font-family: "Inter", "Arial", "sans-serif", "Helvetica";
+  color:  #FFFFFF;
+  min-width: 320px;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 45px 200px 60px;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+@media screen and (max-width: 767px) {
+  .root {
+    padding: 28px 0px 36px;
+  }
+} */
