@@ -40,7 +40,7 @@ function App() {
   }
 
   return (
-      <body className="page">
+      <div className="page">
       <div className="page__container">
         <Header/>
         <Main onEditProfile={handleEditProfileClick} onAddPlace={handleAddPlaceClick} onEditAvatar={handleEditAvatarClick} onCardClick={handleCardClick}/>
@@ -73,7 +73,7 @@ function App() {
 
         <ImagePopup isOpen ={isImagePopupOpen} onClose={closeAllPopups} card={selectedCard}/>
 
-      </body>
+      </div>
       );
 }
 
