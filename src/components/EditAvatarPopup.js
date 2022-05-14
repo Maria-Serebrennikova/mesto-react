@@ -2,20 +2,19 @@ import React from "react";
 import PopupWithForm from "./PopupWithForm";
 
 function EditAvatarPopup(props) {
-  const [inputValue, setInputValue] = React.useState('');
-
-  function handleChangeAvatar(e) {
-    setInputValue(e.target.value);
-  }
+  const avatarRef = React.useRef();
 
   function handleSubmit(e) {
     e.preventDefault();
 
     props.onUpdateAvatar({
-      avatar: inputValue,
+      avatar: avatarRef.current.value,
     });
-    setInputValue('');
   }
+
+  React.useEffect(() => {
+    avatarRef.current.value = '';
+  }, [props.isOpen]);  
 
   return (
     <PopupWithForm
@@ -27,8 +26,7 @@ function EditAvatarPopup(props) {
       onSubmit={handleSubmit}
     >
       <input
-        onChange={handleChangeAvatar}
-        value={inputValue}
+        ref={avatarRef}
         id="avatar-link"
         type="url"
         className="popup__info popup__info_type_avatar-change"
