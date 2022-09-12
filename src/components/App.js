@@ -2,7 +2,6 @@ import React from "react";
 import Header from "./Header";
 import Main from "./Main";
 import Footer from "./Footer";
-import PopupWithForm from "./PopupWithForm";
 import ImagePopup from "./ImagePopup";
 import { CurrentUserContext } from "../contexts/CurrentUserContext";
 import { api } from "../utils/Api";
@@ -21,11 +20,11 @@ function App() {
   const [selectedCard, setSelectedCard] = useState({});
   const [isImagePopupOpen, setIsImagePopupOpen] = useState(false);
   const [cards, setCards] = useState([]);
-  
+
   function handleEditProfileClick() {
     setIsEditProfilePopupOpen(true);
   }
-  
+
   function handleAddPlaceClick() {
     setIsAddPlacePopupOpen(true);
   }
@@ -139,8 +138,8 @@ function App() {
           onUpdateUser={handleUpdateUser}
         />
 
-        <AddPlacePopup 
-        isOpen={isAddPlacePopupOpen} 
+        <AddPlacePopup
+        isOpen={isAddPlacePopupOpen}
         onClose={closeAllPopups}
         onAddPlace={handleAddPlaceSubmit}
         />
